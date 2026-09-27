@@ -1,0 +1,107 @@
+# =============================================================================
+# .gitignore - Proteção de Dados Sensíveis e Fiscais (SEFAZ DF-e)
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# 1. Certificados Digitais e Chaves Criptográficas (Altamente Sensível)
+# -----------------------------------------------------------------------------
+*.pfx
+*.p12
+*.pem
+*.key
+*.cer
+*.crt
+*.p7b
+*.der
+certificates/
+certs/
+
+# -----------------------------------------------------------------------------
+# 2. Dados Fiscais, XMLs e Histórico de Consultas (SEFAZ)
+# -----------------------------------------------------------------------------
+# Diretórios de dados locais gerados pelo cliente SEFAZ
+sefaz_data/
+**/sefaz_data/
+xmls/
+**/xmls/
+danfes/
+dactes/
+reports/
+
+# Documentos fiscais gerados ou baixados
+*.xml
+*.pdf
+*.csv
+
+# Banco local de histórico e travas da SEFAZ
+registry.json
+**/registry.json
+
+# -----------------------------------------------------------------------------
+# 3. Listas de Chaves de Acesso e Anotações de Trabalho
+# -----------------------------------------------------------------------------
+formatação.txt
+formatacao.txt
+chaves*.txt
+lista*.txt
+lote*.txt
+keys*.txt
+*.log
+
+# -----------------------------------------------------------------------------
+# 4. Credenciais, Senhas e Variáveis de Ambiente
+# -----------------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+credentials.json
+senhas.txt
+secrets/
+
+# -----------------------------------------------------------------------------
+# 5. Python (Bytecode, Cache e Ambientes Virtuais)
+# -----------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Ambientes virtuais
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Testes e cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# -----------------------------------------------------------------------------
+# 6. Compilação e Empacotamento (PyInstaller / Executáveis)
+# -----------------------------------------------------------------------------
+build/
+dist/
+*.spec
+*.exe
+
+# -----------------------------------------------------------------------------
+# 7. IDEs e Arquivos de Sistema Operacional
+# -----------------------------------------------------------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
