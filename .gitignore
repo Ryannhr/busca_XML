@@ -15,6 +15,7 @@
 *.der
 certificates/
 certs/
+.gitignore
 
 # -----------------------------------------------------------------------------
 # 2. Dados Fiscais, XMLs e Histórico de Consultas (SEFAZ)
